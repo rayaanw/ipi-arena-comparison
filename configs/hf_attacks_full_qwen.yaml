@@ -1,0 +1,17 @@
+# Full 95-attack HF dataset run against Qwen3-VL (the model these attacks were tuned against)
+target:
+  provider: openrouter
+  model: qwen/qwen3-vl-235b-a22b-instruct
+  api_key: ${OPENROUTER_API_KEY}
+
+judge:
+  provider: openrouter
+  model: google/gemini-2.5-flash
+  api_key: ${OPENROUTER_API_KEY}
+
+behaviors:
+  hf_dataset: sureheremarv/ipi_arena_attacks
+
+output:
+  dir: ./results/full_qwen
+  format: json

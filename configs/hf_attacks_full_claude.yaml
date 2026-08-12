@@ -1,0 +1,19 @@
+# Full 95-attack HF dataset run against Claude, for comparison against Qwen3-VL
+# These attacks were tuned against Qwen and did NOT transfer to closed-source models
+# in the original paper's transfer experiments -- this checks if that still holds.
+target:
+  provider: openrouter
+  model: anthropic/claude-sonnet-4.5
+  api_key: ${OPENROUTER_API_KEY}
+
+judge:
+  provider: openrouter
+  model: google/gemini-2.5-flash
+  api_key: ${OPENROUTER_API_KEY}
+
+behaviors:
+  hf_dataset: sureheremarv/ipi_arena_attacks
+
+output:
+  dir: ./results/full_claude
+  format: json
