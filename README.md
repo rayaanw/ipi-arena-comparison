@@ -1,5 +1,12 @@
 # IPI Arena Bench — Qwen3-VL vs Claude Sonnet 4.5
 
+Independent AI-safety benchmarking: how often does an AI agent get hijacked
+by malicious instructions hidden inside the content it's processing (an
+email, a web page, a tool result) rather than typed by its actual user —
+"indirect prompt injection" (IPI)? This runs a published, open-source attack
+benchmark against two closed-source agent models side by side to compare how
+each one holds up.
+
 Comparison run of [`ipi-arena-bench`](https://github.com/GraySwanAI/ipi_arena_os) (Gray Swan AI's
 indirect prompt injection benchmark) using the open-source attack set from
 [`sureheremarv/ipi_arena_attacks`](https://huggingface.co/datasets/sureheremarv/ipi_arena_attacks)
